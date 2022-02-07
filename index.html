@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Dahir Todo List</title>
+</head>
+<div class="container-fluid bg-dark text-white p-3 " id="header">
+<h1 >Dahir Todo List</h1>
+<p>These assigments must be completed as soon as possible </p>
+</div>
+<body class="body">
+<div class="card bg-primary text-white">
+<form id="todo-form" method="post">
+    <label for="todo-text"> Must complete:</label>
+    <input type="text" placeholder="I need to..." name="todo-text" id="todo-text" >
+</form>
+
+<p> What is left todo: <span id="todo-count">0</span></p>
+<ul id="todo-list"></ul>
+
+</div>
+
+
+
+</body>
+
+<script src="todo.js"></script>
+</html>
