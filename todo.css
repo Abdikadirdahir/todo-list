@@ -29,11 +29,11 @@ li:before {
   }
   
   li button {
-    float: right;
+float: right;
     border: none;
     height: 40px;
     cursor: pointer;
-    
+    background-color: blue;
     color: white;
     font-size: 1em;
   }

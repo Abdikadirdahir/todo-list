@@ -11,27 +11,28 @@ var todos = []
 
 
 function renderTodos( ) {
-todoList.innerHTML = "";
 
+todoList.innerHTML = "";
 todoCount.textContent = todos.length;
 
 for (var i = 0; i < todos.length; i++) {
-
     var todo = todos[i];
+
     var li = document.createElement("li")
     li.textContent = todo;
-    li.setAttribute("date-index", i)
+    li.setAttribute("data-index", i)
     
     var button = document.createElement("button")
     button.textContent = " ☑️ "
-    li.appendChild(button)
-    todoList.appendChild(li)
+
+    li.appendChild(button);
+    todoList.appendChild(li);
 }
 } 
 
 
   
-console.log(renderTodos)
+
 
 function init() {
     var storeTodos = JSON.parse(localStorage.getItem("todos"))
@@ -49,6 +50,7 @@ todoForm.addEventListener("submit", function(event) {
    event.preventDefault();
    
    var todoText = todoInput.value.trim()
+   
    if(todoText === " ") {
        return;
    }
@@ -63,7 +65,9 @@ todoList.addEventListener("click", function(event){
     var element =event.target;
     if (element.matches("button") === true) {
        var index = element.parentElement.getAttribute("data-index");
-       todos.splice(index,1)
+       todos.splice(index, 1)
+
+
        storeTodos()
        renderTodos()
     }
@@ -71,3 +75,5 @@ todoList.addEventListener("click", function(event){
 })
 
 init() 
+
+
